@@ -13,6 +13,10 @@
     gap: 4px;
 }
 
+.tw-followCard aside {
+    width: 60px;
+}
+
 .tw-followCard-info {
     display: flex;
     flex-direction: column;
@@ -37,4 +41,19 @@
     font-weight: bold;
     outline: none;
     cursor: pointer;
+    border: 1px solid #000;
+    transition: .3 ease background-color;
+}
+
+.tw-followCard-button.is-following {
+    border: 1px solid red;
+}
+
+.tw-followCard-button:hover {
+    background-color: #D7DBDC;   
+}
+
+.tw-followCard-button.is-following:hover {
+    background: red;
+    color: #fff;
 }

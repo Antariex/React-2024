@@ -5,17 +5,15 @@ export function App() {
   return (
     <>
       <TwitterFollowCard
-        isFollowing
         userName="antariex"
         name="Ariel Antequiera"
+        initialIsFollowing={true}
       />
       <TwitterFollowCard
-        isFollowing={false}
         userName="_TechMode"
         name="TechMode"
       />
       <TwitterFollowCard
-        isFollowing
         userName="tim_cook"
         name="Tim Cook"
       />

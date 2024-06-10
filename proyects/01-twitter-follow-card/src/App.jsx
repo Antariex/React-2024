@@ -24,7 +24,7 @@ export function App() {
     <section className="App">
       {users.map(({ userName, name, initialIsFollowing }) => 
           <TwitterFollowCard
-            key={userName} // Adding a key prop is a good practice for list items
+            key={userName}
             userName={userName}
             initialIsFollowing={initialIsFollowing}
             name={name}

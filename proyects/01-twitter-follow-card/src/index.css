@@ -1,8 +1,9 @@
 body {
     margin: 0%;
     background-color: #222;
-    font-family: Arial, Helvetica, sans-serif;
     display: grid;
     place-content: center;
     min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2em;
 }

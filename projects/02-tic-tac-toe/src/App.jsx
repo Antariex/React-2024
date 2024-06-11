@@ -1,7 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import "./App.css";
 
-const turns = {
+const TURNS = {
   X: "x",
   O: "o",
 };
@@ -11,8 +12,9 @@ const Square = ({ children, updateBoard, index }) => {
 };
 
 function App() {
-  const board = Array(9).fill(null);
-  
+  const [board, setBoard] = useState(Array(9).fill(null));
+  const [turn, setTurn] = useState(TURNS.X);
+
   return (
     <main className="board">
       <h1>Tic tac toe</h1>
@@ -20,10 +22,15 @@ function App() {
         {board.map((_, index) => {
           return (
             <Square key={index} index={index}>
-
+              {board[index]}
             </Square>
           );
         })}
+      </section>
+
+      <section className="turn">
+        <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
+        <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square> 
       </section>
     </main>
   );
